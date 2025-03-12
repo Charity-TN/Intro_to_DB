@@ -50,7 +50,7 @@ mycursor.execute("""
 CREATE TABLE IF NOT EXISTS Orders(
     id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
-    FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE CASCADE,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
     order_date DATE NOT NULL
 )
 """)
