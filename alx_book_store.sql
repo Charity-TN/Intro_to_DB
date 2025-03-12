@@ -5,10 +5,13 @@ mydb = mysql.connector.connect(
     host="localhost",
     user="Charity18",
     password="xT9@bQ!4z&Wp7%Lm",
-    database="alx_book_store"
 )
 
 mycursor = mydb.cursor()
+
+mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
+
+mycursor.execute("USE alx_book_store")
 
 mycursor.execute("""
 CREATE TABLE IF NOT EXISTS Authors(
